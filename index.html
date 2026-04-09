@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML CSS Assignment - Homepage Layout</title>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/main.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="sticky-nav container-fluid">
+        <div class="header-top" id="sticky-header-content">
+                <!-- Contenuto clonato automaticamente via JavaScript -->
+        </div>
+    </nav>
+    <header>
+        <div class="header-wrapper">
+            <div class="header-top" id="main-header-content">
+                <div class="header-top-left">
+                    <button><i class="bi bi-list fs-5"></i><p class="hidden-label">Menu</p></button>
+                    <button><i class="bi bi-search fs-6" ></i><p class="hidden-label">Search</p></button>
+                    <a href="">ELEMENT 1</a>
+                    <a href="">ELEMENT 2</a>
+                    <a href="">ELEMENT 3</a> 
+                </div>
+                <div id="user-actions">
+                    <button><i class="bi bi-bell fs-5"></i><p class="hidden-label">Notifiche</p></button>
+                    <button id="news-btn"><i class="bi bi-pin-angle"></i> NOTIZIE</button>
+                    <button id="promo-btn">PROMOZIONI</button>
+                    <a href=""><i class="bi bi-person fs-5"></i> ACCEDI</a>
+                </div>
+            </div>
+            <div class="container-fluid header-mid">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-6 logo"><img src="https://placehold.co/600x150?text=Logo" alt=""></div>
+                    <div class="col" id="meteo"> 
+                        <p><b>Date and Time</b></p>
+                        <p>Meteo</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="header-bottom">
+                <ul>
+                    <li><a href="">LINK 1</a></li>
+                    <li><a href="">LINK 2</a></li>
+                    <li><a href="">LINK 3</a></li>
+                    <li><a href="">LINK 4</a></li>
+                    <li><a href="">LINK 5</a></li>
+                    <li><a href="">LINK 6</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-wrapper">
+            <section id="live-matches" class="container-fluid">
+                <div class="row">    
+                    <div class="col-10 d-flex">
+                        <i class="bi bi-record-circle-fill"></i>
+                        <p>Live matches</p>
+                    </div>
+                    <div class="col">
+                        <select>
+                            <option value="">Serie A</option>
+                            <option value="">Premier League</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    
+                </div>
+            </section>
+            <section id="main-news">
+                <div >
+                    <img src="https://placehold.co/300x150" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+                <div >
+                    <img src="https://placehold.co/300x150" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+                <div >
+                    <img src="https://placehold.co/300x150" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/300x150" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+            </section>
+            <img src="https://placehold.co/600x400" alt="">
+            <br>
+            <img src="https://placehold.co/600x400" alt="">
+            <br>
+            <img src="https://placehold.co/600x400" alt="">
+        </div>
+    </main>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // Clona il contenuto della navbar principale nella sticky-nav
+            const mainContent = document.getElementById('main-header-content');
+            const stickyContent = document.getElementById('sticky-header-content');
+            
+            if (mainContent && stickyContent) {
+                stickyContent.innerHTML = mainContent.innerHTML;
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            const stickynav = document.querySelector('.sticky-nav');
+            if (!stickynav) return;
+            if (window.scrollY > 40) {
+                stickynav.style.display = "flex";
+                document.querySelector('.header-top').style.borderBottom = "0";
+            } else {
+                stickynav.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

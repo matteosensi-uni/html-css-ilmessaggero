@@ -1,0 +1,28 @@
+.main-wrapper{
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+#live-matches{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#main-news{
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-news div{
+    margin: 5px;
+}
+
+#main-news div img{
+    width: 100%;
+    max-width: 300px;
+}
+
+#main-news div p{
+   font-size: 1rem;
+}
