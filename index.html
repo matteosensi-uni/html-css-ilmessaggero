@@ -15,20 +15,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <div id="background-adv">
+
+    </div>
     <nav class="sticky-nav container-fluid">
         <div class="header-top" id="sticky-header-content">
-                <!-- Contenuto clonato automaticamente via JavaScript -->
+                <div class="header-top-left">
+                    <button><i class="bi bi-list fs-5"></i><p class="hidden-label">Menu</p></button>
+                    <button><i class="bi bi-search fs-6" ></i><p class="hidden-label">Ricerca</p></button>
+                    <a href="">ELEMENTO 1</a>
+                    <a href="">ELEMENTO 2</a>
+                    <a href="">ELEMENTO 3</a> 
+                </div>
+                <div id="user-actions">
+                    <button><i class="bi bi-bell fs-5"></i><p class="hidden-label">Notifiche</p></button>
+                    <button id="news-btn"><i class="bi bi-pin-angle"></i> NOTIZIE</button>
+                    <button id="promo-btn">PROMOZIONI</button>
+                    <a href=""><i class="bi bi-person fs-5"></i> ACCEDI</a>
+                </div>
         </div>
     </nav>
     <header>
-        <div class="header-wrapper">
+        <div class="content-wrapper">
             <div class="header-top" id="main-header-content">
                 <div class="header-top-left">
                     <button><i class="bi bi-list fs-5"></i><p class="hidden-label">Menu</p></button>
-                    <button><i class="bi bi-search fs-6" ></i><p class="hidden-label">Search</p></button>
-                    <a href="">ELEMENT 1</a>
-                    <a href="">ELEMENT 2</a>
-                    <a href="">ELEMENT 3</a> 
+                    <button><i class="bi bi-search fs-6" ></i><p class="hidden-label">Ricerca</p></button>
+                    <a href="">ELEMENTO 1</a>
+                    <a href="">ELEMENTO 2</a>
+                    <a href="">ELEMENTO 3</a> 
                 </div>
                 <div id="user-actions">
                     <button><i class="bi bi-bell fs-5"></i><p class="hidden-label">Notifiche</p></button>
@@ -42,7 +57,7 @@
                     <div class="col"></div>
                     <div class="col-6 logo"><img src="https://placehold.co/600x150?text=Logo" alt=""></div>
                     <div class="col" id="meteo"> 
-                        <p><b>Date and Time</b></p>
+                        <p><b>Data e Ora</b></p>
                         <p>Meteo</p>
                     </div>
                 </div>
@@ -60,66 +75,157 @@
         </div>
     </header>
     <main>
-        <div class="main-wrapper">
-            <section id="live-matches" class="container-fluid">
-                <div class="row">    
-                    <div class="col-10 d-flex">
+        <div class="content-wrapper">
+            <section id="live-matches">
+                <div id="live-matches-header">    
+                    <div>
                         <i class="bi bi-record-circle-fill"></i>
                         <p>Live matches</p>
                     </div>
-                    <div class="col">
-                        <select>
+                    <div>
+                        <select aria-label="Seleziona il campionato">
                             <option value="">Serie A</option>
                             <option value="">Premier League</option>
                         </select>
                     </div>
                 </div>
-                <div>
-                    
+                <div id="matches-carousel">
+                    <button type="button" aria-label="left-scroll" id="left-arrow"><i class="bi bi-caret-left-fill"></i><h1 class="hidden-label">Left-Arrow</h1></button>
+                    <ul id="track">
+                        <li class="card">
+                            <h1>Partita</h1>
+                            <div>
+                                <b>
+                                    <h2>SQD1-SQD2</h2>
+                                    <h2 class="result">0 : 0</h2>
+                                </b>
+                            </div>
+                            <h3>Stato</h3>
+                        </li>
+                        <li class="card">
+                            <h1>Partita</h1>
+                            <div>
+                                <b>
+                                    <h2>SQD1-SQD2</h2>
+                                    <h2 class="result">0 : 0</h2>
+                                </b>
+                            </div>
+                            <h3>Stato</h3>
+                        </li>
+                        <li class="card">
+                            <h1>Partita</h1>
+                            <div>
+                                <b>
+                                    <h2>SQD1-SQD2</h2>
+                                    <h2 class="result">0 : 0</h2>
+                                </b>
+                            </div>
+                            <h3>Stato</h3>
+                        </li>
+                        <li class="card">
+                            <h1>Partita</h1>
+                            <div>
+                                <b>
+                                    <h2>SQD1-SQD2</h2>
+                                    <h2 class="result">0 : 0</h2>
+                                </b>
+                            </div>
+                            <h3>Stato</h3>
+                        </li>
+                        <li class="card">
+                            <h1>Partita</h1>
+                            <div>
+                                <b>
+                                    <h2>SQD1-SQD2</h2>
+                                    <h2 class="result">0 : 0</h2>
+                                </b>
+                            </div>
+                            <h3>Stato</h3>
+                        </li>
+                        <li class="card">
+                            <h1>Partita</h1>
+                            <div>
+                                <b>
+                                    <h2>SQD1-SQD2</h2>
+                                    <h2 class="result">0 : 0</h2>
+                                </b>
+                            </div>
+                            <h3>Stato</h3>
+                        </li>
+                        <li class="card">
+                            <h1>Partita</h1>
+                            <div>
+                                <b>
+                                    <h2>SQD1-SQD2</h2>
+                                    <h2 class="result">0 : 0</h2>
+                                </b>
+                            </div>
+                            <h3>Stato</h3>
+                        </li>
+                        
+                    </ul>
+                    <button type="button" aria-label="right-scroll" id="right-arrow"><i class="bi bi-caret-right-fill"></i><h1 class="hidden-label">Right-Arrow</h1></button>
                 </div>
             </section>
-            <section id="main-news">
+            <section id="top-news">
+                <h1 class="hidden-label">Top News</h1>
                 <div >
-                    <img src="https://placehold.co/300x150" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <img src="https://placehold.co/300x100" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</p>
                     <p>Lorem ipsum dolor</p>
                 </div>
                 <div >
-                    <img src="https://placehold.co/300x150" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <img src="https://placehold.co/300x100" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</p>
                     <p>Lorem ipsum dolor</p>
                 </div>
                 <div >
-                    <img src="https://placehold.co/300x150" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <img src="https://placehold.co/300x100" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</p>
                     <p>Lorem ipsum dolor</p>
                 </div>
                 <div>
-                    <img src="https://placehold.co/300x150" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab? Numquam fugit rem praesentium maxime, vitae ratione aspernatur at dolorum voluptas fuga, mollitia quae!</p>
+                    <img src="https://placehold.co/300x100" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</p>
                     <p>Lorem ipsum dolor</p>
                 </div>
             </section>
-            <img src="https://placehold.co/600x400" alt="">
-            <br>
-            <img src="https://placehold.co/600x400" alt="">
-            <br>
-            <img src="https://placehold.co/600x400" alt="">
+            <section class="row">
+                <div class="col-8" style="background-color: aqua;">
+                    <img src="https://placehold.co/300x400" alt="">
+                    <img src="https://placehold.co/300x400" alt="">
+                    <img src="https://placehold.co/300x400" alt="">
+                </div>
+                <aside class="col-4" style="background-color: orange;">a</aside>
+            </section>
+            <section class="mid-section" style="margin: 20px;">
+                <img src="https://placehold.co/300x400" alt=""><br>
+                <img src="https://placehold.co/300x400" alt=""><br>
+                <img src="https://placehold.co/300x400" alt="">
+            </section>
+            <section class="row">
+                <div class="col-8" style="background-color: aqua;">
+                    <img src="https://placehold.co/300x400" alt="">
+                    <img src="https://placehold.co/300x400" alt="">
+                    <img src="https://placehold.co/300x400" alt="">
+                </div>
+                <aside class="col-4" style="background-color: orange;">a</aside>
+            </section>
         </div>
     </main>
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            // Clona il contenuto della navbar principale nella sticky-nav
-            const mainContent = document.getElementById('main-header-content');
-            const stickyContent = document.getElementById('sticky-header-content');
-            
-            if (mainContent && stickyContent) {
-                stickyContent.innerHTML = mainContent.innerHTML;
-            }
-        });
+    <footer>
+        <div class="content-wrapper">
 
-        window.addEventListener('scroll', function() {
-            const stickynav = document.querySelector('.sticky-nav');
+        </div>
+    </footer>
+    <script>
+        const stickynav = document.querySelector('.sticky-nav');
+        const left_scroll = document.getElementById("left-arrow");
+        const right_scroll = document.getElementById("right-arrow");
+        const carousel_track = document.getElementById("track");
+        const scroll_amount = 250;
+        
+        window.addEventListener('scroll', () => {
             if (!stickynav) return;
             if (window.scrollY > 40) {
                 stickynav.style.display = "flex";
@@ -128,6 +234,14 @@
                 stickynav.style.display = "none";
             }
         });
+        
+        left_scroll.addEventListener('click', () =>{
+            carousel_track.scrollBy({left: -scroll_amount, behavior:"smooth"})
+        });
+        right_scroll.addEventListener('click', () =>{
+            carousel_track.scrollBy({left: scroll_amount, behavior:"smooth"})
+        });
+        
     </script>
 </body>
 </html>
