@@ -1,3 +1,12 @@
+
+:root {
+  --matches-color: rgb(161, 83, 0);
+  --border-color: #ddd;
+  --secondary-border-color: #bbb;
+  --primary-color: #B22222;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +23,7 @@ header {
     top: 0;
     width: 100%;
     box-shadow: 0px 5px 10px rgba(108, 108, 108, 0.3);
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
     background-color: white;
     z-index: 100;
 }
@@ -28,7 +37,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: white;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
     width: 100%;
     max-width: 1244px;
 }
@@ -48,7 +57,7 @@ header {
 
 .header-top-left a{
     color: #444;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid var(--border-color);
     padding: 5px 20px;
     font-weight:600;
     font-size: small;
@@ -67,10 +76,10 @@ header {
 }
 
 #news-btn{
-    background-color: #550000; 
+    background-color: #450D13; 
 }
 #promo-btn{
-    background-color: rgb(178, 0, 0); 
+    background-color: var(--primary-color); 
 }
 #news-btn, #promo-btn{
     padding: 5px 25px;
@@ -109,8 +118,8 @@ header {
     padding: 0;
     list-style: none;
 
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     margin :0 0 5px 0;
 }
 
