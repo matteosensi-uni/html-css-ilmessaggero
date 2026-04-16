@@ -4,8 +4,8 @@
   --border-color: #ddd;
   --secondary-border-color: #bbb;
   --primary-color: #B22222;
+  --link-hover-color: #aaa
 }
-
 
 body {
     margin: 0;
@@ -31,7 +31,6 @@ header {
 
 /* --- HEADER TOP --- */
 .header-top {
-    margin: 0;
     padding: 0 8px;
     display: flex;
     justify-content: space-between;
@@ -90,14 +89,16 @@ header {
 
 /* --- HEADER MID --- */
 .header-mid{
-    padding: 8px;
+    padding: 0 8px;
 }
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 35px 0 25px 0;;
 }
+
 #meteo{
     display: flex;
     flex-direction: column;
@@ -108,19 +109,20 @@ header {
     text-align: right;
     margin: 0;
     font-size: 12px;
-
 }
 
 /* --- HEADER BOTTOM --- */
+.header-bottom{
+    padding: 0 8px;
+}
 .header-bottom ul {
     display: flex;
     justify-content: center;
     padding: 0;
+    margin: 0;
     list-style: none;
-
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    margin :0 0 5px 0;
 }
 
 .header-bottom a{
