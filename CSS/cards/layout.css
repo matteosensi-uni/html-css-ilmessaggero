@@ -1,0 +1,105 @@
+/* ----- NEWS CARD LAYOUT (standard layout) -----*/
+.news-card__topic { grid-area: topic; }
+.news-card__title { grid-area: title; }
+.news-card__aside { grid-area: links;}
+.news-card__credits { grid-area: author;}
+.news-card__media { grid-area: media; }
+.news-card__description { grid-area: description;}
+
+.news-card {
+    display: grid;
+    grid-template-areas:
+        "topic"
+        "title"
+        "author"
+        "media"
+        "links";
+}
+
+/* ----- IMG BOTTOM LEFT LAYOUT -----*/
+
+.media-bottom-left {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto auto auto 1fr;
+    grid-template-areas:
+        "title title"
+        "media ."
+        "media author"
+        "media description"
+        "media links"
+        "media .";
+    height: 100%;
+    padding: 0;
+    align-items: center;
+
+}
+
+/* ----- NO IMG LAYOUT -----*/
+
+.no-media {
+    grid-template-areas:
+        "topic"
+        "title"
+        "links"
+        "author";
+}
+
+
+/* ----- IMG LEFT LAYOUT ----- */
+
+.media-left.valign-start, .small-media-left.valign-start{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto minmax(0, 1fr);
+    grid-template-areas:
+        "media topic"
+        "media title"
+        "media author"
+        "media links"
+        "media .";
+}
+
+.media-left, .small-media-left{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(0, 1fr) auto auto auto auto minmax(0, 1fr);
+    grid-template-areas:
+        "media ."
+        "media topic"
+        "media title"
+        "media author"
+        "media links"
+        "media .";
+}
+
+.small-media-left{
+    grid-template-columns: 1fr 3fr;
+}
+
+/* ----- MEDIA TOP LAYOUT -----*/
+
+.media-top {
+    border: 0;
+    grid-template-areas:
+        "topic"
+        "media"
+        "title"
+        "author"
+        "links";
+}
+
+/* title over media */
+
+
+.title-over-media {
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas:
+        "media"
+        "title"
+        "author"
+        "links";
+}
+
+.title-over-media .news-card__media {
+    grid-row: 1 / 4;
+    margin: 0;
+}
+

@@ -18,7 +18,7 @@ header {
 }
 
 .sticky-nav{
-    display: none;
+    display: flex;
     justify-content: center;
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@ header {
 
 /* --- HEADER TOP --- */
 .header-top {
-    padding: 0 8px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,11 +40,18 @@ header {
     border-bottom: 1px solid var(--border-color);
     width: 100%;
     max-width: 1244px;
+    min-height: 43px;
+}
+
+.header-top .logo{
+    display: flex;
+    justify-content: center;
 }
 
 .header-top div{
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .header-top a{
@@ -71,8 +78,14 @@ header {
     margin: 3px;
 }
 
-.hidden-label {
-    display: none;
+#menu-btn{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#user-actions{
+    display: flex;
+    justify-content: end;
 }
 
 #news-btn{
@@ -82,22 +95,23 @@ header {
     background-color: var(--primary-color); 
 }
 #news-btn, #promo-btn{
-    padding: 5px 25px;
+    padding: 8px 16px;
     margin: 3px 10px;
     color: white;
-    border-radius: 15px;
+    border-radius: 32px;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 /* --- HEADER MID --- */
 .header-mid{
-    padding: 0 8px;
+    padding: 35px 0 25px 0;
 }
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 35px 0 25px 0;;
 }
 
 #meteo{
@@ -113,21 +127,22 @@ header {
 }
 
 /* --- HEADER BOTTOM --- */
-.header-bottom{
-    padding: 0 8px;
-}
+
 .header-bottom ul {
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 0;
     list-style: none;
+    margin: 0;
+    padding: 6px;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    gap: 8px 60px;
 }
 
 .header-bottom a{
     text-decoration: none;
-    margin: 0 50px;
+    font-size: 0.9375rem;
     color: #c80000;
 }
+
+

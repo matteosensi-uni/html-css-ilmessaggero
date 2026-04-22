@@ -1,0 +1,105 @@
+.news-section.red .news-section__header{
+    color: var(--primary-color);
+}
+
+.news-section.red .news-section__header .news-section__header__title{
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.news-section.red .news-section__header .more a{
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* NEWSLETTER */
+
+.news-section.newsletter{
+    background-color: #E6EEF6;
+}
+
+.newsletter .newsletter__title{
+    line-height: 2;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.news-section.newsletter .news-card__description{
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 8px 0;
+}
+
+.news-section.newsletter .news-card__credits{
+    color: #235989;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin: 4px 0 4px 0;
+    font-style: normal;
+}
+
+.news-section.newsletter .news-card__title{
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    
+}
+/* BLUE */
+.news-section.blue{
+    background-color: #2C497F;
+}
+
+.news-section.blue .news-section__header{
+    color: #FFF;
+}
+
+
+.news-section.blue .news-section__header .news-section__header__title{
+    color: #2C497F;
+    background-color: #FFF;
+}
+
+.news-section.blue .news-card__title{
+    color: #FFF;
+}
+.news-section.blue .news-card__title a:hover{
+    color: #FFF;
+}
+
+.news-section.with-bgc .news-section__content{
+    background-color: var(--card-background-color);
+    padding: 8px;
+}
+
+.news-section.with-bgc .news-card__topic{
+    color: #535253;
+}
+
+.news-section.with-bgc .news-section__header__title{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.news-section.sport{
+    background-color: #1E335A;
+    color: #FFF;
+}
+
+.news-section.sport a:hover{
+    color: inherit;
+}
+
+.news-section.sport .news-section__header__title:first-of-type{
+    color: #1E335A;
+    background-color: #FFF;
+    padding-left: 8px;
+    margin-right: 8px;
+}
+
+.news-section.sport .news-card__credits{
+    color: #FFF;
+}

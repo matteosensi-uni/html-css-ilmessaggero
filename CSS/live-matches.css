@@ -1,0 +1,77 @@
+/* ----- LIVE MATCHES SECTION -----*/
+
+.live-matches {
+    padding: 20px;
+}
+
+.live-matches__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid var(--matches-color);
+    padding: 5px;
+}
+
+.live-matches__header div {
+    display: flex;
+    color: var(--matches-color);
+}
+
+.live-matches__header div p {
+    margin: 0 5px;
+    padding: 0;
+}
+
+.live-matches__carousel {
+    display: flex;
+    align-items: center;
+}
+
+.live-matches__track {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.live-matches__track .card {
+    border: 0;
+    min-width: 150px;
+    background-color: lightgray;
+    margin: 5px 0px;
+    text-align: center;
+}
+
+.live-matches__track .card h1,
+.live-matches__track .card h3,
+.live-matches__track .card h2 {
+    margin: 2px;
+    font-size: small;
+}
+
+.live-matches__track .card h2:last-of-type {
+    margin: 0;
+    font-size: large;
+    color: var(--matches-color);
+}
+
+.live-matches__track .card div {
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+    padding: 5px;
+}
+
+.live-matches__right-btn,
+.live-matches__left-btn {
+    width: 5%;
+    font-size: 40px;
+    border: 0;
+    background-color: white;
+    margin: 5px;
+}
