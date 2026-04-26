@@ -19,8 +19,8 @@
 /* ----- IMG BOTTOM LEFT LAYOUT -----*/
 
 .media-bottom-left {
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto 1fr auto auto auto 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-rows: auto minmax(0, 1fr) auto auto auto minmax(0, 1fr);
     grid-template-areas:
         "title title"
         "media ."
@@ -48,7 +48,6 @@
 /* ----- IMG LEFT LAYOUT ----- */
 
 .media-left.valign-start, .small-media-left.valign-start{
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto minmax(0, 1fr);
     grid-template-areas:
         "media topic"
@@ -59,19 +58,35 @@
 }
 
 .media-left, .small-media-left{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(0, 1fr) auto auto auto auto minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr) auto auto auto auto auto minmax(0, 1fr);
     grid-template-areas:
         "media ."
         "media topic"
         "media title"
         "media author"
+        "media description"
         "media links"
         "media .";
 }
 
 .small-media-left{
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+}
+
+.news-section.alternate .media-left:nth-child(even), .news-section.alternate .small-media-left:nth-child(even), .small-media-right{
+    grid-template-areas:
+        ". media"
+        "topic media"
+        "title media"
+        "author media"
+        "description media"
+        "links media"
+        ". media";
+}
+
+.news-section.alternate .small-media-left:nth-child(even), .small-media-right{
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
 }
 
 /* ----- MEDIA TOP LAYOUT -----*/

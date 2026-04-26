@@ -11,7 +11,48 @@
     margin-bottom: 32px;
 }
 
+.layout__aside .news-section{
+    padding-bottom: 0px;
+    margin-bottom: 28px;
+}
+
+.layout__aside .news-section .news-section__content{
+    gap: 0;
+}
+
+.layout__aside .news-card{
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+.layout__aside .news-card:last-child{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
 .layout__main .news-section {
+    border-bottom: 1px solid var(--secondary-border-color);
+}
+
+.news-section.article-divider__primary .news-card:not(:last-child){
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+
+.news-section.article-divider__secondary .news-card:not(:last-child){
+    border-bottom: 1px solid var(--secondary-border-color);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+.news-section.section-divider__primary{
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-section.section-divider__primary{
     border-bottom: 1px solid var(--secondary-border-color);
 }
 
@@ -26,6 +67,7 @@
     padding: 0 0;
 }
 
+
 .news-section__header.lined::before {
   content: "";
   order: 2;
@@ -35,8 +77,6 @@
   margin: 0px;
 }
 
-
-
 .news-section__header.underlined{
     border-bottom: 1px solid black;
 }
@@ -45,6 +85,11 @@
     background-color: #000;
     color: #FFF;
     padding-left: 8px;
+}
+
+.news-section__header.highlighted.pink .news-section__header__title{
+    background-color: #9B347F;
+    
 }
 
 .news-section__header .news-section__header__title{
@@ -131,12 +176,6 @@
     margin-bottom: 0;
 }
 
-.news-section.featured{
-    padding: 16px;
-    background-color: var(--card-background-color);
-    border: 0;
-}
-
 .news-section .right-side .news-card__title{
     font-size: 1.625rem;
     line-height: 33px;
@@ -145,4 +184,19 @@
 .news-section-1-2 .media-left .news-card__title{
     font-size: 2rem;
     line-height: 39px;
+}
+
+.news-section.social{
+    padding-bottom: 16px;
+}
+
+.news-section.social .news-section__content > *{
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #FFF;
+  border-radius: 4px;
 }

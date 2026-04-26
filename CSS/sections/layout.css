@@ -68,3 +68,12 @@
 .news-section-3 .news-section__content{
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+.news-section.social .news-section__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 16px;   
+}
+

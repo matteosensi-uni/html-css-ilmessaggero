@@ -8,6 +8,10 @@
   --card-background-color: #F2F2F2; 
 }
 
+*{
+    font-family: "Poppins", Helvetica, sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -59,7 +63,6 @@ header {
     color: #222;
     font-weight: bold;
     font-size: small;
-
 }
 
 .header-top-left a{
@@ -67,7 +70,7 @@ header {
     border-left: 1px solid var(--border-color);
     padding: 5px 20px;
     font-weight:600;
-    font-size: small;
+    font-family: sans-serif;
 }
 
 .header-top button{
@@ -86,6 +89,7 @@ header {
 #user-actions{
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 
 #news-btn{
