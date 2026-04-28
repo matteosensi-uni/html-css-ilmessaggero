@@ -1,0 +1,92 @@
+#side-menu .overlay{
+    background-color: rgba(0,0,0,.3);
+    z-index: 99;
+    cursor: pointer;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#side-menu__content{
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    width: 390px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+
+#side-menu__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 0 16px;
+}
+
+#side-menu__header > figure{
+    margin: 0;
+    padding: 0;
+}
+
+#side-menu__header > button{
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+#side-menu__search{
+    padding: 0 24px 0 16px;
+    margin-top: 16px;
+}
+
+
+#side-menu__search > form{
+    position: relative;
+}
+
+
+#side-menu__search input{
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+#side-menu__search button{
+    position: absolute;
+    right: 0;
+    border: 0;
+    background-color: transparent;
+    bottom: 0;
+    top: 0;
+    padding-right: 8px;
+}
+
+
+
+#side-menu__section .footer__menu{
+    flex-direction: column;
+    padding: 0 16px;
+    padding-bottom: 16px;
+}
+
+#side-menu__section .footer__menu__section{
+    margin: 32px 0 0 0;
+    padding: 32px 0 0 0;
+    border-top: 1px solid #000;
+}
+
+#side-menu__section .footer__menu__section > ul{
+    columns : 2;
+}
+
+#side-menu__section .footer__menu__section ul li a{
+    font-size: 14px;
+}

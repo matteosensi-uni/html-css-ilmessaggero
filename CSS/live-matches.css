@@ -1,12 +1,12 @@
 /* ----- LIVE MATCHES SECTION -----*/
 
 .live-matches {
-    padding: 20px;
+    padding: 0 15px;
 }
 
 .live-matches__header {
     display: flex;
-    align-items: center;
+    align-items:flex-end;
     justify-content: space-between;
     width: 100%;
     border-bottom: 2px solid var(--matches-color);
@@ -21,6 +21,8 @@
 .live-matches__header div p {
     margin: 0 5px;
     padding: 0;
+    font-size: 12px;
+    align-self: center;
 }
 
 .live-matches__carousel {
@@ -36,7 +38,7 @@
     overflow-y: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    padding: 5px;
+    padding: 0px;
     margin: 0;
 }
 

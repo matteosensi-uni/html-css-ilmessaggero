@@ -2,6 +2,12 @@
     --wrapper-width: 1260px;
 }
 
+@media screen and (max-width: 1540px){
+    :root{
+        --wrapper-width: 996px;
+    }
+}
+
 /* Content wrapper */
 .content-wrapper {
     max-width: var(--wrapper-width);
@@ -13,7 +19,6 @@
 
 /* Utilities */
 .text-decoration-none {
-    text-decoration: none;
     color: inherit;
 }
 
