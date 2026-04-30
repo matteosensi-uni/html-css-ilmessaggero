@@ -49,6 +49,7 @@
 
 .media-left.valign-start, .small-media-left.valign-start{
     grid-template-rows: auto auto auto auto minmax(0, 1fr);
+    align-items: start;
     grid-template-areas:
         "media topic"
         "media title"

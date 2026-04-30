@@ -25,6 +25,17 @@
     align-self: center;
 }
 
+.live-matches__header select {
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.live-matches__header select option {
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+
 .live-matches__carousel {
     display: flex;
     align-items: center;
@@ -50,14 +61,14 @@
     text-align: center;
 }
 
-.live-matches__track .card h1,
+.live-matches__track .card h2,
 .live-matches__track .card h3,
-.live-matches__track .card h2 {
+.live-matches__track .card h4 {
     margin: 2px;
     font-size: small;
 }
 
-.live-matches__track .card h2:last-of-type {
+.live-matches__track .card h3:last-of-type {
     margin: 0;
     font-size: large;
     color: var(--matches-color);

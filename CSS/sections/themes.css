@@ -159,6 +159,17 @@
     color: inherit;
 }
 
+.news-section.gray .video .news-card__title{
+    padding-bottom: 8px;
+}
+
+@media screen and (max-width:1539px) {
+    .news-section.gray .video .news-card__title{
+        font-size: 1rem;
+        line-height: 23px;
+    }
+}
+
 /* ALTERNATE */
 
 .news-section.alternate .news-section__content{
@@ -248,4 +259,11 @@
     font-family: "bootstrap-icons";
     font-size: 1.5rem;
     color: var(--primary-color);
+}
+
+@media screen and (max-width:1539px) {
+    .news-section.podcast .news-section__content .news-card__title{
+        font-size: 1rem;
+        line-height: 23px;
+    }
 }
