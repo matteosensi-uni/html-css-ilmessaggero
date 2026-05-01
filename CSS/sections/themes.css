@@ -1,5 +1,25 @@
-/* RED */
+/* FRONT SECTION */
+.news-section.front-section{
+    margin-bottom: 16px;
+    padding: 0;
+}
+.news-section.front-section .news-section__content{
+    padding: 0 16px;
+}
 
+.news-section.front-section .news-section__content .news-card__title > *{
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-size: 26px;
+    line-height: 33px;
+}
+
+.news-section.front-section .news-section__content .news-card__aside li a{
+    font-size: 16px;
+}
+
+
+
+/* RED */
 .news-section.red .news-section__header{
     color: var(--primary-color);
 }
@@ -14,6 +34,23 @@
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
+}
+
+.news-section.red .link-list{
+    list-style: none;
+    display: none;
+    overflow: scroll;
+    padding: 0 0 8px 0;
+}
+
+.news-section.red .link-list a{
+    padding: 2px 12px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: nowrap;
+    border-right: 1px solid var(--border-color);
+    margin: 10px 0;
 }
 
 /* NEWSLETTER */
@@ -70,7 +107,6 @@
     outline: none;
     box-shadow: none;
     appearance: none;
-
 }
 
 /* BLUE */
@@ -102,7 +138,7 @@
     color: #535253;
 }
 
-.news-section__content.featured{
+.news-section .news-section__content.featured{
     padding: 16px 8px;
 }
 
@@ -163,13 +199,6 @@
     padding-bottom: 8px;
 }
 
-@media screen and (max-width:1539px) {
-    .news-section.gray .video .news-card__title{
-        font-size: 1rem;
-        line-height: 23px;
-    }
-}
-
 /* ALTERNATE */
 
 .news-section.alternate .news-section__content{
@@ -187,6 +216,22 @@
     background-color: var(--card-background-color);
     padding-left: 8px;
     padding-right: 8px;
+}
+
+
+.news-section.alternate .news-card:nth-child(even){
+    grid-template-areas:
+        ". media"
+        "topic media"
+        "title media"
+        "author media"
+        "description media"
+        "links media"
+        ". media";
+}
+
+.news-section.alternate .small-media-left:nth-child(even){
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
 }
 
 /* EDITORIAL LIST */
@@ -241,7 +286,6 @@
 .news-section.podcast .news-section__content > .news-card {
     position: relative;
     padding-left: 3rem;
-
 }
 
 .news-section.podcast .news-section__content .news-card:before{
@@ -266,4 +310,250 @@
         font-size: 1rem;
         line-height: 23px;
     }
+
+    .news-section.gray .video .news-card__title{
+        font-size: 1rem;
+        line-height: 23px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .news-section.sport, .news-section.blue, .news-section.editorial-list, .news-section.most-viewed {
+        display: none;
+    }
+
+    /* RED */
+    .news-section.red .link-list{
+        display: flex;
+    }
+
+    .news-section.red .news-section__header .news-section__header__title{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .news-section.red .news-section__content{
+        grid-template-columns: 1fr;
+    }
+
+    .news-section.red .news-section__content .news-card:first-child{
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .news-section.red .news-section__content .news-card:not(:first-child) .news-card__media{
+        display: none;
+    }
+
+    .news-section.red .news-section__content .news-card .news-card__title{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .news-section.red .news-section__header .more{
+        display: none;
+    }
+
+
+    /* FEATURED */
+    .news-section__content.featured .news-card{
+        border: 0;
+    }
+
+    .news-section.featured{
+        background-color: transparent;
+        padding: 0;
+    }
+
+    /* GRAY */
+
+    .news-section.gray .news-section__content{
+        background-color: #F8F7F7;
+        color: #000;
+        padding: 16px;
+    }
+    .news-section.gray .news-section__content > .news-card:first-child .news-card__topic{
+        border-bottom: 1px solid var(--secondary-border-color);
+        padding: 8px;
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+
+    .news-section.gray .news-section__content > .news-card .news-card__title{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.6px;
+    }
+
+    .news-section.gray .news-section__content > .news-card:first-child .news-card__title > a{
+        font-size: 22px;
+        line-height: 31px;
+        font-weight: 700;
+        font-family: "Libre Baskerville", Georgia, sans-serif; 
+    }
+
+    .news-section.gray .news-section__content > .news-card:not(:last-child){
+        margin: 0 0 16px 0;
+        padding-bottom: 8px;
+    }
+
+    .news-section.gray .news-section__content .news-card:not(:first-child){
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .news-section.gray .news-section__content > .news-card,
+    .news-section.gray .news-section__content > .news-card:first-child{
+        border-color: #E5E5E5;
+    }
+
+    .news-section.gray .news-section__content > .news-card:not(:first-child){
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: minmax(0, 1fr) auto auto auto auto auto minmax(0, 1fr);
+        grid-template-areas:
+            "media ."
+            "media topic"
+            "media title"
+            "media author"
+            "media description"
+            "media links"
+            "media .";
+        gap: 0 8px;
+    }
+
+    /* NEWSLETTER */
+
+    .news-section.featured.newsletter .news-card__description{
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+
+    .news-section.featured.newsletter .news-card__media{
+        margin-bottom: 16px;
+    }
+
+    .news-section.featured.newsletter .news-card__credits{
+        margin: 0 0 8px 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    .news-section.featured.newsletter .news-card__title{
+        padding: 0;
+    }
+
+    .news-section.featured.newsletter{
+        padding: 16px;
+    }
+
+    .news-section.featured.newsletter .news-section__content{
+        gap: 0;
+        padding: 0;
+    }
+
+    .news-section.featured.newsletter .news-section__content > .news-card{
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    /* DIRECTOR */
+
+    .news-section.director .news-card:first-child{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: minmax(0, 1fr) auto auto auto auto auto minmax(0, 1fr);
+        grid-template-areas:
+            "media ."
+            "media topic"
+            "media title"
+            "media author"
+            "media description"
+            "media links"
+            "media .";
+        gap: 0 8px;
+    }
+
+    /* ALTERNATE */
+
+    .news-section.alternate .news-section__content .news-card{
+        background-color: transparent;
+        padding: 0 0 8px 0;
+    }
+
+    .news-section.alternate .news-section__content .news-card:not(:last-child){
+        margin: 0 0 16px 0;
+    }
+
+    .news-section.alternate .news-section__content .news-card:first-child{
+        padding-top: 16px;
+    }
+
+    .news-section.alternate .news-section__content .news-card .news-card__title{
+        font-size: 14px;
+        line-height: 19.6px;
+        font-weight: 700;
+    }
+
+    .news-section.alternate .news-section__content .news-card .news-card__aside {
+        padding: 0;
+    }
+
+    .news-section.alternate .news-section__content .news-card{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto auto 1fr auto ;
+        grid-template-areas:
+            "media topic"
+            "media title"
+            "media author"
+            "media description"
+            "media ."
+            "links links";
+        align-items: start;
+        gap: 0 8px;
+    }
+
+    /* PODCAST */
+
+    .news-section.podcast .news-section__header{
+        padding: 8px;
+        margin: 0;
+    }
+
+    .news-section.podcast .news-section__header .news-section__header__title{
+        border: 1px solid #000;
+        padding: 0 16px;
+        margin-right: 8px;
+    }
+
+    .news-section.podcast .news-section__header > .more{
+        display: none;
+    }
+
+    .news-section.podcast .news-section__header.underlined::after{
+        margin: 0;
+        content: "";
+        order: 1;
+        flex: 1;
+        height: 5px;
+        border-top: 1px solid currentColor;
+        border-bottom: 1px solid currentColor;
+        background-color: transparent;
+    }
+
+    .news-section.podcast{
+        background-color: #F7F1F1;
+    }
+
+    .news-section.podcast .news-section__content.featured{
+        background-color: #F7F1F1;
+    }
+
+    .news-section.podcast .news-section__content .news-card:before{
+        display: none;
+    }
+    .news-section.podcast .news-section__content > .news-card {
+        padding-left: 0;
+    }
+
 }

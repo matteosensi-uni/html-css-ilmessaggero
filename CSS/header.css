@@ -1,6 +1,6 @@
-
+/* Variabili */
 :root {
-  --matches-color: rgb(161, 83, 0);
+  --matches-color: #ab4f03;
   --border-color: #ddd;
   --secondary-border-color: #bbb;
   --primary-color: #B22222;
@@ -21,15 +21,19 @@ header {
     width: 100%;
 }
 
+/* --------- HEADER --------- */
+
 .header{
     display: flex;
     flex-direction: column;
 }
 
-.sticky-nav{
+/* STICKY NAV */
+
+.sticky-nav, .sticky-nav-side{
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     box-shadow: 0px 5px 10px rgba(108, 108, 108, 0.3);
@@ -38,6 +42,15 @@ header {
     z-index: 10;
 }
 
+.sticky-nav-side{
+    box-shadow: none;
+    position: sticky;
+    z-index: 1;
+}
+
+.sticky-nav-side .header-top{
+    box-shadow: none;
+}
 
 /* --- HEADER TOP --- */
 .header-top {
@@ -68,7 +81,7 @@ header {
 .header a,
 .sticky-nav a{
     text-decoration: none;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .header-top-left{
@@ -98,7 +111,8 @@ header {
     background-color: white;
     border: 0;
     padding: 0;
-    text-wrap: nowrap;
+    white-space: nowrap;
+    color: #000;
 }
 
 #menu-btn{

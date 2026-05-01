@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="CSS/side-menu.css">
     <link rel="stylesheet" href="CSS/bottom-menu.css">
 
-    <link rel="stylesheet" href="CSS/sections/style.css">
     <link rel="stylesheet" href="CSS/sections/layout.css">
+    <link rel="stylesheet" href="CSS/sections/style.css">
     <link rel="stylesheet" href="CSS/sections/themes.css">
 
     <link rel="stylesheet" href="CSS/cards/style.css">
@@ -30,6 +30,8 @@
     <!-- FONT -->
      <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
     </style>
 </head>
 <body>
@@ -41,10 +43,29 @@
     </div>
     <!-- --------------------------------------------------------------------------- -->
 
-    <div class="visually-hidden" aria-hidden="true" id="side-menu" role="dialog" aria-modal="true" aria-labelledby="side-menu-title">
+    <div class="visually-hidden" id="side-menu" role="dialog" aria-modal="true" aria-labelledby="side-menu-title" inert="true">
         <h2 class="visually-hidden" id="side-menu-title">Menu di navigazione</h2>
         <div class="overlay"></div>
         <div id="side-menu__content">
+            <nav class="sticky-nav-side" aria-label="Navbar side-menu sticky">
+                <div class="header-top">
+                    <div class="header-top-left">
+                        <button id="close-btn" aria-label="Chiudi il menu di navigazione">
+                            <i aria-hidden="true" class="bi bi-x fs-4"></i>
+                        </button>
+                        <button id="search-btn" aria-controls="side-menu" aria-expanded="false" aria-label="Apri Ricerca"><i aria-hidden="true" class="bi bi-search" ></i><p class="visually-hidden">Ricerca</p></button>
+                    </div>
+                    <div class="logo">
+                        <img src="https://placehold.co/174x40?text=Logo" alt="Immagine del logo navbar">
+                    </div>
+                    <div id="user-actions">
+                        <button aria-label="Apri le notifiche" id="bell-btn"><i aria-hidden="true" class="bi bi-bell"></i></button>
+                        <button id="news-btn" aria-label="Apri le tue notizie"><i class="bi bi-pin-angle" aria-hidden="true"></i> NOTIZIE</button>
+                        <button id="promo-btn" aria-label="Vedi le promozioni">PROMOZIONI</button>
+                        <a href="" id="log-in"><i aria-hidden="true" class="bi bi-person"></i><p>ACCEDI</p></a>
+                    </div>
+                </div>
+            </nav>
             <div id="side-menu__header">
                 <figure>
                     <img src="https://placehold.co/29x30?text=L" alt="Lettera del logo">
@@ -62,101 +83,101 @@
             </div>
             <div id="side-menu__section">
                 <nav class="footer__menu" aria-label="Navbar del side menu">
-                    <div class="footer__menu__section" id="footer__accordion-menu">
+                    <div class="footer__menu__section">
                         <h3>SEZIONI</h3>
                         <ul>
                             <li class="subsection">                                
-                                <a href="" class="text-decoration-none"  data-bs-toggle="collapse" data-bs-target="#d" role="button"
+                                <a href="" class="no-text-decoration"  data-bs-toggle="collapse" data-bs-target="#d" role="button"
                                     aria-expanded="false" aria-controls="d" >
                                 Sezione
                                 </a>
-                                <ul class="collapse" id="d" data-bs-parent="#footer__accordion-menu">
+                                <ul class="collapse" id="d">
                                     <li class="subsection">                                
-                                        <a href="" class="text-decoration-none"  data-bs-toggle="collapse" data-bs-target="#dd" role="button"
+                                        <a href="" class="no-text-decoration"  data-bs-toggle="collapse" data-bs-target="#dd" role="button"
                                             aria-expanded="false" aria-controls="dd" >
                                         Sezione
                                         </a>
                                         <ul class="collapse" id="dd">
-                                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
                                 </ul>
                             </li>
                             <li class="subsection">                                
-                                <a href="" class="text-decoration-none"  data-bs-toggle="collapse" data-bs-target="#e" role="button"
+                                <a href="" class="no-text-decoration"  data-bs-toggle="collapse" data-bs-target="#e" role="button"
                                     aria-expanded="false" aria-controls="e" >
                                 Sezione
                                 </a>
                                 <ul class="collapse" id="e">
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
                                 </ul>
                             </li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                         </ul>
                     </div>
-                    <div class="footer__menu__section" id="footer__accordion-menu">
+                    <div class="footer__menu__section">
                         <h3>SEZIONI</h3>
                         <ul>
                             <li>                                
-                                <a href="" class="text-decoration-none"  data-bs-toggle="collapse" data-bs-target="#f" role="button"
+                                <a href="" class="no-text-decoration"  data-bs-toggle="collapse" data-bs-target="#f" role="button"
                                     aria-expanded="false" aria-controls="f" >
                                 Sezione
                                 </a>
                                 <ul class="collapse" id="f">
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
                                 </ul>
                             </li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                             
                         </ul>
                     </div>
                     <div class="footer__menu__section">
                         <h3>SEZIONI</h3>
                         <ul>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                         </ul>
                     </div>
                     <div class="footer__menu__section">
                         <h3>SEZIONI</h3>
                         <ul>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                             
                         </ul>
                     </div>
@@ -233,7 +254,7 @@
         </div>
     </header>
     <main>
-        <div class="content-wrapper">
+        <div class="content-wrapper container-fluid">
             <section class="live-matches">
                 <div class="live-matches__header">    
                     <div>
@@ -329,45 +350,79 @@
                     </button>
                 </div>
             </section>
+            <section class="news-section front-section visually-hidden">
+                <div class="news-section__content">
+                    <article class="news-card">
+                        <div class="news-card__topic">
+                            <p>Argomento</p>
+                        </div>
+                        <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium explicabo autem molestias quam voluptas modi eveniet doloribus</a></h2>
+                        <figure class="news-card__media">
+                            <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo6">
+                        </figure>
+                        <aside class="news-card__aside">
+                            <ul class="other-links">
+                                <li><a href="" class="no-text-decoration">link1</a></li>
+                                <li><a href="" class="no-text-decoration">link2</a></li>
+                            </ul>
+                        </aside>
+                    </article>
+                </div>
+            </section>
             <section class="news-section news-section-4" id="top-news">
+                <header class="news-section__header center-boxed visually-hidden">
+                    <p class="news-section__header__title">Argomento</p>
+                </header>
                 <div class="news-section__content">
                     <article class="news-card media-top">
+                        <div class="news-card__topic visually-hidden">
+                            <p>Argomento</p>
+                        </div>
                         <figure class="news-card__media">
                             <img src="https://placehold.co/300x100" alt="Immagine dell'articolo1">
                         </figure>
                         <h2 class="news-card__title">
-                            <b><a href="" class="text-decoration-none">TITOLO</a></b>
-                            <a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
+                            <b><a href="" class="no-text-decoration">TITOLO</a></b>
+                            <a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
                         </h2>
                         <address class="news-card__credits">Lorem ipsum</address>
                     </article>
                     <article class="news-card media-top">
+                        <div class="news-card__topic visually-hidden">
+                            <p>Argomento</p>
+                        </div>
                         <figure class="news-card__media">
                             <img src="https://placehold.co/300x100" alt="Immagine dell'articolo2">
                         </figure>
                         <h2 class="news-card__title">
-                            <b><a href="" class="text-decoration-none">TITOLO</a></b>
-                            <a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
+                            <b><a href="" class="no-text-decoration">TITOLO</a></b>
+                            <a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
                         </h2>
                         <address class="news-card__credits ">Lorem ipsum</address>
                     </article>
                     <article class="news-card media-top">
+                        <div class="news-card__topic visually-hidden">
+                            <p>Argomento</p>
+                        </div>
                         <figure class="news-card__media">
                             <img src="https://placehold.co/300x100" alt="Immagine dell'articolo3">
                         </figure>
                         <h2 class="news-card__title">
-                            <b><a href="" class="text-decoration-none">TITOLO</a></b>
-                            <a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
+                            <b><a href="" class="no-text-decoration">TITOLO</a></b>
+                            <a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
                         </h2>
                         <address class="news-card__credits ">Lorem ipsum</address>
                     </article>
                     <article class="news-card media-top">
+                        <div class="news-card__topic visually-hidden">
+                            <p>Argomento</p>
+                        </div>
                         <figure class="news-card__media">
                             <img src="https://placehold.co/300x100" alt="Immagine dell'articolo3">
                         </figure>
                         <h2 class="news-card__title">
-                            <b><a href="" class="text-decoration-none">TITOLO</a></b>
-                            <a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
+                            <b><a href="" class="no-text-decoration">TITOLO</a></b>
+                            <a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
                         </h2>
                         <address class="news-card__credits ">Lorem ipsum</address>
                     </article>
@@ -382,37 +437,39 @@
                         </header>
                         <div class="news-section__content">
                             <article class="news-card">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium explicabo autem molestias quam voluptas modi eveniet doloribus</a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium explicabo autem molestias quam voluptas modi eveniet doloribus</a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo4">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                         </div>
                     </section>
                     <section class="news-section">
-                        <article class="news-card media-left">
-                            <div class="news-card__topic live">
-                                <p>Argomento</p>
-                            </div>
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
-                            <address class="news-card__credits "> Lorem ipsum </address>
-                            <figure class="news-card__media">
-                                <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo5">
-                            </figure>
-                            <aside class="news-card__aside">
-                                <ul class="other-links">
-                                    <li><a href="" class="text-decoration-none">link1</a></li>
-                                    <li><a href="" class="text-decoration-none">link2</a></li>
-                                </ul>
-                            </aside>
-                        </article>
+                        <div class="news-section__content">
+                            <article class="news-card media-left">
+                                <div class="news-card__topic live">
+                                    <p>Argomento</p>
+                                </div>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <address class="news-card__credits "> Lorem ipsum </address>
+                                <figure class="news-card__media">
+                                    <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo5">
+                                </figure>
+                                <aside class="news-card__aside">
+                                    <ul class="other-links">
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
+                                    </ul>
+                                </aside>
+                            </article>
+                        </div>
                     </section>
                     
                     
@@ -420,33 +477,34 @@
                         <header class="news-section__header lined highlighted">
                             <p class="news-section__header__title">ARGOMENTO</p>
                         </header>
-                        <article class="news-card no-media">
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
-                            <address class="news-card__credits "> Lorem ipsum </address>
-                            <aside class="news-card__aside">
-                                <ul class="other-links">
-                                    <li><a href="" class="text-decoration-none">link1</a></li>
-                                    <li><a href="" class="text-decoration-none">link2</a></li>
-                                </ul>
-                            </aside>
-                        </article>
+                        <div class="news-section__content">
+                            <article class="news-card no-media">
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <address class="news-card__credits "> Lorem ipsum </address>
+                                <aside class="news-card__aside">
+                                    <ul class="other-links">
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
+                                    </ul>
+                                </aside>
+                            </article>
+                        </div>
                     </section>
                     <section class="news-section">
                         <div class="news-section__content">
-                            
                             <article class="news-card">
                                 <div class="news-card__topic">
                                     <p>Argomento</p>
                                 </div>
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium explicabo autem molestias quam voluptas modi eveniet doloribus</a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium explicabo autem molestias quam voluptas modi eveniet doloribus</a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo6">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -458,60 +516,60 @@
                         </header>
                         <div class="news-section__content">
                             <article class="news-card media-bottom-left divider">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo7">
                                 </figure>
-                                <p class="news-card__description"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit...</a></p>
+                                <p class="news-card__description"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit...</a></p>
                             </article>
                             <article class="news-card media-bottom-left">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo8">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left divider">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo9">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo10">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                         </div>
                     </section>
 
-                    <section class="news-section news-section-3">
+                    <section class="news-section news-section-3 carousel">
                         <header  class="news-section__header underlined">
                             <p class="news-section__header__title">Top News</p>
                             <div class="more">
-                                <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                             </div>
                         </header>
                         <div class="news-section__content">
@@ -520,8 +578,8 @@
                                     <img src="https://placehold.co/300x100" alt="Immagine dell'articolo11">
                                 </figure>
                                 <h2 class="news-card__title">
-                                    <a href="" class="text-decoration-none">TITOLO</a>
-                                    <a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
+                                    <a href="" class="no-text-decoration">TITOLO</a>
+                                    <a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
                                 </h2>
                                 <address class="news-card__credits ">Lorem ipsum</address>
                             </article>
@@ -530,8 +588,8 @@
                                     <img src="https://placehold.co/300x100" alt="Immagine dell'articolo12">
                                 </figure>
                                 <h2 class="news-card__title">
-                                    <a href="" class="text-decoration-none">TITOLO</a>
-                                    <a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
+                                    <a href="" class="no-text-decoration">TITOLO</a>
+                                    <a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
                                 </h2>
                                 <address class="news-card__credits ">Lorem ipsum</address>
                             </article>
@@ -540,8 +598,8 @@
                                     <img src="https://placehold.co/300x100" alt="Immagine dell'articolo13">
                                 </figure>
                                 <h2 class="news-card__title">
-                                    <a href="" class="text-decoration-none">TITOLO</a>
-                                    <a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
+                                    <a href="" class="no-text-decoration">TITOLO</a>
+                                    <a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatem consectetur nesciunt atque facilis et ab?</a>
                                 </h2>
                                 <address class="news-card__credits ">Lorem ipsum</address>
                             </article>
@@ -551,38 +609,57 @@
                         <header class="news-section__header highlighted lined">
                                 <p class="news-section__header__title">Argomento</p>
                                 <div class="more">
-                                    <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                    <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                                 </div>
                         </header>
-                        <article class="news-card">
-                            <figure class="news-card__media">
-                                <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo14">
-                            </figure>
-                        </article>
+                        <div class="news-section__content">
+                            <article class="news-card">
+                                <figure class="news-card__media">
+                                    <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo14">
+                                </figure>
+                            </article>
+                        </div>
                     </section>
                    
                     <section class="news-section news-section-1-3 red">
                         <header class="news-section__header lined">
                             <h3 class="news-section__header__title">Argomento</h3>
                             <div class="more">
-                                <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
-                                <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                             </div>        
                         </header>
+                        <ul class="link-list">
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                            <li><a href="" class="text-decoration-none">Lorem</a></li>
+                        </ul>
                         <div class="news-section__content">
-                            <article class="news-card media-left border-0">
+                            <article class="news-card media-left">
                                 <div class="news-card__topic">
                                     <p>Argomento</p>
                                 </div>
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo15">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -590,15 +667,15 @@
                                 <div class="news-card__topic">
                                     <p>Argomento</p>
                                 </div>
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo16">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -606,15 +683,15 @@
                                 <div class="news-card__topic">
                                     <p>Argomento</p>
                                 </div>
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo17">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -622,15 +699,15 @@
                                 <div class="news-card__topic">
                                     <p>Argomento</p>
                                 </div>
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo18">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -642,23 +719,23 @@
                         </header>
                         <div class="news-section__content">
                             <article class="news-card media-bottom-left divider">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo19">
                                 </figure>
-                                <p class="news-card__description"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit...</a></p>
+                                <p class="news-card__description"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit...</a></p>
                             </article>
                             <article class="news-card media-bottom-left">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo20">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -670,11 +747,11 @@
                         </header>
                         <div class="news-section__content">
                             <article class="news-card">
-                                <a class="text-decoration-none" href="">
+                                <a class="no-text-decoration" href="">
                                     <h2 class="newsletter__title"><i class="bi bi-envelope-exclamation"></i> Argomento</h2>
                                     <p class=" news-card__description">Descrizione</p>
                                 </a>
-                                <a class="text-decoration-none" href="">
+                                <a class="no-text-decoration" href="">
                                     <figure class=" news-card__media">
                                         <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo21">
                                     </figure>
@@ -683,11 +760,11 @@
                                 </a>
                             </article>
                             <article class="news-card">
-                                <a class="text-decoration-none" href="">
+                                <a class="no-text-decoration" href="">
                                     <h2 class="newsletter__title"><i class="bi bi-envelope-exclamation"></i> Argomento</h2>
                                     <p class=" news-card__description">Descrizione</p>
                                 </a>
-                                <a class="text-decoration-none" href="">
+                                <a class="no-text-decoration" href="">
                                     <figure class=" news-card__media">
                                         <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo22">
                                     </figure>
@@ -696,11 +773,11 @@
                                 </a>
                             </article>
                             <article class="news-card">
-                                <a class="text-decoration-none" href="">
+                                <a class="no-text-decoration" href="">
                                     <h2 class="newsletter__title"><i class="bi bi-envelope-exclamation"></i> Argomento</h2>
                                     <p class=" news-card__description">Descrizione</p>
                                 </a>
-                                <a class="text-decoration-none" href="">
+                                <a class="no-text-decoration" href="">
                                     <figure class=" news-card__media">
                                         <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo23">
                                     </figure>
@@ -715,7 +792,7 @@
                             <p class="news-section__header__title">Argomento</p>
                         </header>
                         <article class="news-card media-left">
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                             <figure class="news-card__media">
                                 <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo25">
                             </figure>
@@ -733,7 +810,7 @@
                                 <div class="news-card__topic">
                                     <p>Argomento</p>
                                 </div>
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo26">
                                 </figure>
@@ -743,25 +820,25 @@
                 </div>
                 <div class="col-md-4">
                     <div class="layout__aside">
-                        <section class="news-section gray article-divider__secondary">
+                        <section class="news-section gray article-divider">
                             <div class="news-section__content featured">
                                 <article class="news-card media-top">
                                     <div class="news-card__topic">
                                         <p>Argomento</p>
                                     </div>
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo27">
                                     </figure>
                                 </article> 
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo28">
                                     </figure>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo29">
                                     </figure>
@@ -774,27 +851,33 @@
                             </header>
                             <div class="news-section__content">
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo30">
                                     </figure>
                                     <address class="news-card__credits">Lorem ipsum</address>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo31">
                                     </figure>
                                     <address class="news-card__credits">Lorem ipsum</address>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo32">
                                     </figure>
+                                    <aside class="news-card__aside">
+                                        <ul class="other-links">
+                                            <li><a href="" class="no-text-decoration">link1</a></li>
+                                            <li><a href="" class="no-text-decoration">link2</a></li>
+                                        </ul>
+                                    </aside>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo33">
                                     </figure>
@@ -802,13 +885,13 @@
                             </div>
                         </section>
 
-                        <section class="news-section article-divider__secondary">
+                        <section class="news-section director article-divider">
                             <header class="news-section__header underlined highlighted">
                                 <p class="news-section__header__title">ARGOMENTO</p>
                             </header>
                             <div class="news-section__content featured">
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__description"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__description"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo34">
                                     </figure>
@@ -817,21 +900,21 @@
                                 <article class="news-card no-media">
                                     <aside class="news-card__aside" style="margin-top:0">
                                         <ul class="other-links">
-                                            <li><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatum repellat fugit.</a></li>
+                                            <li><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatum repellat fugit.</a></li>
                                         </ul>
                                     </aside>
                                 </article>
                                 <article class="news-card no-media">
                                     <aside class="news-card__aside" style="margin-top:0">
                                         <ul class="other-links">
-                                            <li><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatum repellat fugit.</a></li>
+                                            <li><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatum repellat fugit.</a></li>
                                         </ul>
                                     </aside>
                                 </article>
                                 <article class="news-card no-media">
                                     <aside class="news-card__aside" style="margin-top:0">
                                         <ul class="other-links">
-                                            <li><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatum repellat fugit.</a></li>
+                                            <li><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatum repellat fugit.</a></li>
                                         </ul>
                                     </aside>
                                 </article> 
@@ -844,7 +927,7 @@
                             </header>
                             <div class="news-section__content">
                                 <article class="news-card small-media-right">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo35">
                                     </figure>
@@ -852,14 +935,14 @@
                                 </article>
                                 <article class="news-card no-media">
                                     <p class="news-card__topic">Lorem ipsum</p>
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 </article>
                                 <article class="news-card no-media">
                                     <p class="news-card__topic">Lorem ipsum</p>
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 </article>
                                 <article class="news-card small-media-right">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo36">
                                     </figure>
@@ -868,7 +951,7 @@
                             </div>
                         </section>
 
-                        <section class="news-section social section-divider__primary">
+                        <section class="news-section social section-divider">
                             <header class="news-section__header underlined">
                                 <p class="news-section__header__title">SOCIAL</p>
                             </header>
@@ -901,11 +984,11 @@
                         </section>
               
                         
-                        <section class="news-section gray article-divider__secondary">
+                        <section class="news-section gray article-divider">
                             <header class="news-section__header underlined">
                                 <p class="news-section__header__title">Argomento</p>
                                 <div class="more">
-                                    <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                    <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                                 </div>
                             </header>
                             <div class="news-section__content featured">
@@ -913,25 +996,25 @@
                                     <div class="news-card__topic">
                                         <p >Argomento</p>
                                     </div>
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo37">
                                     </figure>
                                 </article> 
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo38">
                                     </figure>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo39">
                                     </figure>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo40">
                                     </figure>
@@ -943,24 +1026,24 @@
                             <header class="news-section__header underlined">
                                 <p class="news-section__header__title">Argomento</p>
                                 <div class="more">
-                                    <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                    <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                                 </div>
                             </header>
                             <div class="news-section__content">
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo41">
                                     </figure>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo42">
                                     </figure>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo43">
                                     </figure>
@@ -969,68 +1052,68 @@
                         </section>
 
 
-                        <section class="news-section most-viewed article-divider__secondary section-divider__primary">
+                        <section class="news-section most-viewed article-divider section-divider">
                             <header class="news-section__header underlined highlighted">
                                 <p class="news-section__header__title">Argomento</p>
                             </header>
                             <div class="news-section__content">
                                 <article class="news-card no-media">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article>
                                 <article class="news-card no-media">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article>
                                 <article class="news-card no-media">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article>
                                 <article class="news-card no-media">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article>
                                 <article class="news-card no-media">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article>
                             </div>
                         </section>
                         
-                        <section class="news-section  section-divider__primary">
+                        <section class="news-section  section-divider">
                             <header class="news-section__header underlined">
                                 <p class="news-section__header__title">Argomento</p>
                                 <div class="more">
-                                    <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                    <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                                 </div>
                             </header>
                             <div class="news-section__content ">
                                 <article class="news-card media-top">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo44">
                                     </figure>
                                 </article>
                             </div>
                         </section>
-                        <section class="news-section gray video article-divider__secondary">
+                        <section class="news-section gray video article-divider">
                             <div class="news-section__content featured video">
                                 <article class="news-card">
                                     <div class="news-card__topic">
                                         <p >Argomento</p>
                                     </div>
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo37">
                                     </figure>
                                 </article> 
                             </div>
                         </section>
-                        <section class="news-section article-divider__secondary podcast">
+                        <section class="news-section article-divider podcast">
                             <header class="news-section__header underlined">
                                 <p class="news-section__header__title">ARGOMENTO</p>
                                 <div class="more">
-                                    <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                    <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                                 </div>
                             </header>
                             <div class="news-section__content featured">
@@ -1038,14 +1121,14 @@
                                     <div class="news-card__topic">
                                         <p>Lorem Ipsum</p>
                                     </div>
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article> 
                                 <article class="news-card no-media">
                                     <div class="news-card__topic">
                                         <p>Lorem Ipsum</p>
                                     </div>
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article> 
                             </div>
@@ -1057,43 +1140,43 @@
             <section class="news-page__mid">
                 <section class="news-section news-section-1-3 featured sport">
                     <header class="news-section__header lined">
-                        <p class="news-section__header__title"><a href="" class="text-decoration-none">Argomento</a></p>
-                        <p class="news-section__header__title"><a href="" class="text-decoration-none">Argomento</a></p>
-                        <p class="news-section__header__title"><a href="" class="text-decoration-none">Argomento</a></p>
-                        <p class="news-section__header__title"><a href="" class="text-decoration-none">Argomento</a></p>
-                        <p class="news-section__header__title"><a href="" class="text-decoration-none">Argomento</a></p>
+                        <p class="news-section__header__title"><a href="" class="no-text-decoration">Argomento</a></p>
+                        <p class="news-section__header__title"><a href="" class="no-text-decoration">Argomento</a></p>
+                        <p class="news-section__header__title"><a href="" class="no-text-decoration">Argomento</a></p>
+                        <p class="news-section__header__title"><a href="" class="no-text-decoration">Argomento</a></p>
+                        <p class="news-section__header__title"><a href="" class="no-text-decoration">Argomento</a></p>
                         <div class="more">
-                            <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                            <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                         </div>
                     </header>
                     <div class="news-section__content">
                         <article class="news-card title-over-media">
                             <figure class="news-card__media">
-                            <img src="https://placehold.co/840x360?text=." alt="Immagine dell'articolo45">
+                            <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo45">
                             </figure>
                             <h2 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, architecto nisi? Ipsum est aut, numquam a porro doloribus aliquid voluptate, optio ratione esse rerum minus. Harum nesciunt assumenda iste saepe.</h2>
                             <p class="news-card__credits ">Lorem ipsum</p>
                             <aside class="news-card__aside">
                                 <ul class="other-links">
-                                    <li><a href="" class="text-decoration-none">link1</a></li>
-                                    <li><a href="" class="text-decoration-none">link2</a></li>
+                                    <li><a href="" class="no-text-decoration">link1</a></li>
+                                    <li><a href="" class="no-text-decoration">link2</a></li>
                                 </ul>
                             </aside>
                         </article>
                         <article class="news-card media-left valign-start">
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor gniohf hgsophso hifoshgf  sit amet consectetur adipisicing elit. lore</a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor gniohf hgsophso hifoshgf  sit amet consectetur adipisicing elit. lore</a></h2>
                             <figure class="news-card__media">
                                 <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo46">
                             </figure>
                         </article>
                         <article class="news-card media-left valign-start">
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                             <figure class="news-card__media">
                                 <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo47">
                             </figure>
                         </article>
                         <article class="news-card media-left valign-start">
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                             <figure class="news-card__media">
                                 <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo48">
                             </figure>
@@ -1101,20 +1184,23 @@
                     </div>
                 </section>
 
-                <section class="news-section news-section-1-3 featured">
+                <section class="news-section news-section-1-3 featured carousel small">
                     <header class="news-section__header underlined">
                         <p class="news-section__header__title">Argomento</p>
                     </header>
                     <div class="news-section__content">
                         <article class="news-card">
+                            <div class="news-card__topic">
+                                <p>Argomento</p>
+                            </div>
                             <figure class="news-card__media">
-                            <img src="https://placehold.co/840x360?text=." alt="Immagine dell'articolo49">
+                            <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo49">
                             </figure>
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam asperiores qui iste architecto, expedita similique saepe velit a quas natus enim dolorum praesentium nostrum inventore beatae officiis quia! Neque.</a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam asperiores qui iste architecto, expedita similique saepe velit a quas natus</a></h2>
                             <aside class="news-card__aside">
                                 <ul class="other-links">
-                                    <li><a href="" class="text-decoration-none">link1</a></li>
-                                    <li><a href="" class="text-decoration-none">link2</a></li>
+                                    <li><a href="" class="no-text-decoration">link1</a></li>
+                                    <li><a href="" class="no-text-decoration">link2</a></li>
                                 </ul>
                             </aside>
                         </article>
@@ -1122,7 +1208,7 @@
                             <div class="news-card__topic">
                                 <p>Argomento</p>
                             </div>
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                             <figure class="news-card__media">
                                 <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo50">
                             </figure>
@@ -1131,7 +1217,7 @@
                             <div class="news-card__topic">
                                 <p>Argomento</p>
                             </div>
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                             <figure class="news-card__media">
                                 <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo51">
                             </figure>
@@ -1140,7 +1226,7 @@
                             <div class="news-card__topic">
                                 <p>Argomento</p>
                             </div>
-                            <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                            <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                             <figure class="news-card__media">
                                 <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo52">
                             </figure>
@@ -1151,70 +1237,70 @@
                     <div class="news-section__header underlined">
                         <p class="news-section__header__title">Argomento</p>
                         <div class="more">
-                            <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                            <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8 left-side">
+                        <div class="col-md-8 left-side">
                             <section class="news-section-1-2">
                                 <div class="news-section__content">
                                     <article class="news-card media-left ">
-                                        <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                        <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                         <address class="news-card__credits "> Lorem ipsum </address>
                                         <figure class="news-card__media">
                                             <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo53">
                                         </figure>
                                         <aside class="news-card__aside">
                                             <ul class="other-links">
-                                                <li><a href="" class="text-decoration-none">link1</a></li>
-                                                <li><a href="" class="text-decoration-none">link2</a></li>
+                                                <li><a href="" class="no-text-decoration">link1</a></li>
+                                                <li><a href="" class="no-text-decoration">link2</a></li>
                                             </ul>
                                         </aside>
                                     </article>
                                     <article class="news-card media-bottom-left divider">
-                                        <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                        <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                         <address class="news-card__credits "> Lorem ipsum </address>
                                         <figure class="news-card__media">
                                             <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo54">
                                         </figure>
                                         <aside class="news-card__aside">
                                             <ul class="other-links">
-                                                <li><a href="" class="text-decoration-none">link1</a></li>
-                                                <li><a href="" class="text-decoration-none">link2</a></li>
+                                                <li><a href="" class="no-text-decoration">link1</a></li>
+                                                <li><a href="" class="no-text-decoration">link2</a></li>
                                             </ul>
                                         </aside>
-                                        <p class="news-card__description"><a href="" class="text-decoration-none">Description</a></p>
+                                        <p class="news-card__description"><a href="" class="no-text-decoration">Description</a></p>
                                     </article>
                                     <article class="news-card media-bottom-left">
-                                        <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                        <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                         <address class="news-card__credits "> Lorem ipsum </address>
                                         <figure class="news-card__media">
                                             <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo55">
                                         </figure>
                                         <aside class="news-card__aside">
                                             <ul class="other-links">
-                                                <li><a href="" class="text-decoration-none">link1</a></li>
-                                                <li><a href="" class="text-decoration-none">link2</a></li>
+                                                <li><a href="" class="no-text-decoration">link1</a></li>
+                                                <li><a href="" class="no-text-decoration">link2</a></li>
                                             </ul>
                                         </aside>
                                     </article>
                                 </div>
                             </section>
                         </div>
-                        <div class="col-4 right-side">
+                        <div class="col-md-4 right-side">
                             <article class="news-card media-top">
                                 <div class="news-card__topic">
                                     <p>Argomento</p>
                                 </div>
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo56">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -1231,46 +1317,46 @@
                         <div class="news-section__header underlined">
                             <p class="news-section__header__title">Argomento</p>
                             <div class="more">
-                                <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                             </div>
                         </div>
                         <div class="news-section__content">
                             <article class="news-card media-left ">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo57">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left divider">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo58">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo59">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -1279,41 +1365,41 @@
                     <section class="news-section news-section-1-2 featured">
                         <div class="news-section__content">
                             <article class="news-card media-left ">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo60">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left divider">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo61">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo62">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -1322,41 +1408,41 @@
                     <section class="news-section news-section-1-2 featured">
                         <div class="news-section__content">
                             <article class="news-card media-left ">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo63">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left divider">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo64">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo65">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -1365,41 +1451,41 @@
                     <section class="news-section news-section-1-2 featured">
                         <div class="news-section__content">
                             <article class="news-card media-left ">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/800x450?text=." alt="Immagine dell'articolo66">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left divider">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo67">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
                             <article class="news-card media-bottom-left">
-                                <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                 <address class="news-card__credits "> Lorem ipsum </address>
                                 <figure class="news-card__media">
                                     <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo68">
                                 </figure>
                                 <aside class="news-card__aside">
                                     <ul class="other-links">
-                                        <li><a href="" class="text-decoration-none">link1</a></li>
-                                        <li><a href="" class="text-decoration-none">link2</a></li>
+                                        <li><a href="" class="no-text-decoration">link1</a></li>
+                                        <li><a href="" class="no-text-decoration">link2</a></li>
                                     </ul>
                                 </aside>
                             </article>
@@ -1408,16 +1494,16 @@
                 </div>
                 <div class="col-md-4">
                     <div class="layout__aside">
-                        <section class="news-section  section-divider__primary">
+                        <section class="news-section  section-divider">
                             <header class="news-section__header underlined">
                                 <p class="news-section__header__title">Argomento</p>
                                 <div class="more">
-                                    <p class><a href="" class="text-decoration-none" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
+                                    <p class><a href="" class="no-text-decoration" aria-label="Visualizza altre notizue sull'argomento">More></a></p>
                                 </div>
                             </header>
                             <div class="news-section__content ">
                                 <article class="news-card media-top">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo69">
                                     </figure>
@@ -1430,34 +1516,34 @@
                             </header>
                             <div class="news-section__content ">
                                 <article class="news-card media-top">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo70">
                                     </figure>
                                 </article>
                             </div>
                         </section>
-                        <section class="news-section section-divider__primary article-divider__secondary">
+                        <section class="news-section section-divider article-divider">
                             <header class="news-section__header underlined">
                                 <p class="news-section__header__title">Argomento</p>
                             </header>
                             <div class="news-section__content">
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo71">
                                     </figure>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo72">
                                     </figure>
                                     <address class="news-card__credits">Lorem Ipsum</address>
                                 </article>
                                 <article class="news-card small-media-left">
-                                    <h2 class="news-card__title"><a href="" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
+                                    <h2 class="news-card__title"><a href="" class="no-text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></h2>
                                     <figure class="news-card__media">
                                         <img src="https://placehold.co/400x300?text=." alt="Immagine dell'articolo73">
                                     </figure>
@@ -1488,102 +1574,102 @@
             </div>
             <div class="footer__mid">
                 <nav class="footer__menu" aria-label="Navbar del footer">
-                    <div class="footer__menu__section" id="footer__accordion-menu">
+                    <div class="footer__menu__section">
                         <h3>SEZIONI</h3>
                         <ul class="footer__menu__columns">
                             <li class="subsection">                                
-                                <a href="" class="text-decoration-none"  data-bs-toggle="collapse" data-bs-target="#a" role="button"
+                                <a href="" class="no-text-decoration"  data-bs-toggle="collapse" data-bs-target="#a" role="button"
                                     aria-expanded="false" aria-controls="a">
                                 Sezione
                                 </a>
-                                <ul class="collapse" id="a" data-bs-parent="#footer__accordion-menu">
+                                <ul class="collapse" id="a" >
                                     <li class="subsection">                                
-                                        <a href="" class="text-decoration-none"  data-bs-toggle="collapse" data-bs-target="#aa" role="button"
+                                        <a href="" class="no-text-decoration"  data-bs-toggle="collapse" data-bs-target="#aa" role="button"
                                             aria-expanded="false" aria-controls="aa" >
                                         Sezione
                                         </a>
                                         <ul class="collapse" id="aa">
-                                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
                                 </ul>
                             </li>
                             <li class="subsection">                                
-                                <a class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#b"
+                                <a class="no-text-decoration" data-bs-toggle="collapse" data-bs-target="#b"
                                     aria-expanded="false" aria-controls="b" >
                                 Sezione
                                 </a>
 
-                                <ul class="collapse" id="b" data-bs-parent="#footer__accordion-menu">
-                                    <li>Borsa</li>
-                                    <li>Tasse</li>
+                                <ul class="collapse" id="b" >
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
                                 </ul>
                             </li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                         </ul>
                     </div>
-                    <div class="footer__menu__section" id="footer__accordion-menu">
+                    <div class="footer__menu__section" >
                         <h3>SEZIONI</h3>
                         <ul>
                             <li class="subsection">                                
-                                <a href="" class="text-decoration-none"  data-bs-toggle="collapse" data-bs-target="#c" role="button"
+                                <a href="" class="no-text-decoration"  data-bs-toggle="collapse" data-bs-target="#c" role="button"
                                     aria-expanded="false" aria-controls="c" >
                                 Sezione
                                 </a>
                                 <ul class="collapse" id="c">
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
-                                    <li><a href="" class="text-decoration-none">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
+                                    <li><a href="" class="no-text-decoration">Sezione</a></li>
                                 </ul>
                             </li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                             
                         </ul>
                     </div>
                     <div class="footer__menu__section">
                         <h3>SEZIONI</h3>
                         <ul>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                         </ul>
                     </div>
                     <div class="footer__menu__section">
                         <h3>SEZIONI</h3>
                         <ul>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
-                            <li><a href="" class="text-decoration-none">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
+                            <li><a href="" class="no-text-decoration">Sezione</a></li>
                             
                         </ul>
                     </div>
@@ -1598,22 +1684,22 @@
                 </div>
                 <nav class="footer__links" aria-label="Link ad altre sezioni del sito">
                     <ul>
-                        <li><a class="text-decoration-none" href="">Link1</a></li>
-                        <li><a class="text-decoration-none" href="">Link2</a></li>
-                        <li><a class="text-decoration-none" href="">Link3</a></li>
-                        <li><a class="text-decoration-none" href="">Link4</a></li>
-                        <li><a class="text-decoration-none" href="">Link5</a></li>
+                        <li><a class="no-text-decoration" href="">Link1</a></li>
+                        <li><a class="no-text-decoration" href="">Link2</a></li>
+                        <li><a class="no-text-decoration" href="">Link3</a></li>
+                        <li><a class="no-text-decoration" href="">Link4</a></li>
+                        <li><a class="no-text-decoration" href="">Link5</a></li>
                     </ul>
                 </nav>
             </div>    
             <div class="footer__bottom">
-                <a class="text-decoration-none" href="">Link1</a>
-                <a class="text-decoration-none" href="">Link2</a>
-                <a class="text-decoration-none" href="">Link3</a>
-                <a class="text-decoration-none" href="">Link4</a>
-                <a class="text-decoration-none" href="">Link5</a>
-                <a class="text-decoration-none" href="">Link6</a>
-                <a class="text-decoration-none" href="">Link7</a>
+                <a class="no-text-decoration" href="">Link1</a>
+                <a class="no-text-decoration" href="">Link2</a>
+                <a class="no-text-decoration" href="">Link3</a>
+                <a class="no-text-decoration" href="">Link4</a>
+                <a class="no-text-decoration" href="">Link5</a>
+                <a class="no-text-decoration" href="">Link6</a>
+                <a class="no-text-decoration" href="">Link7</a>
             </div>
         </div>
     </footer>

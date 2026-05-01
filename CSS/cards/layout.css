@@ -16,7 +16,9 @@
         "links";
 }
 
-/* ----- IMG BOTTOM LEFT LAYOUT -----*/
+
+
+/* ----- MEDIA BOTTOM LEFT LAYOUT -----*/
 
 .media-bottom-left {
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
@@ -34,7 +36,7 @@
 
 }
 
-/* ----- NO IMG LAYOUT -----*/
+/* ----- NO MEDIA LAYOUT -----*/
 
 .no-media {
     grid-template-areas:
@@ -44,8 +46,7 @@
         "author";
 }
 
-
-/* ----- IMG LEFT LAYOUT ----- */
+/* ----- MEDIA LEFT LAYOUT ----- */
 
 .media-left.valign-start, .small-media-left.valign-start{
     grid-template-rows: auto auto auto auto minmax(0, 1fr);
@@ -75,7 +76,9 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
 }
 
-.news-section.alternate .media-left:nth-child(even), .news-section.alternate .small-media-left:nth-child(even), .small-media-right{
+/* ----- SMALL MEDIA RIGHT -----*/
+
+.small-media-right{
     grid-template-areas:
         ". media"
         "topic media"
@@ -86,7 +89,7 @@
         ". media";
 }
 
-.news-section.alternate .small-media-left:nth-child(even), .small-media-right{
+.small-media-right{
     grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
 }
 
@@ -102,8 +105,8 @@
         "links";
 }
 
-/* title over media */
 
+/* -----TITLE OVER MEDIA -----*/
 
 .title-over-media {
     grid-template-rows: 1fr auto auto auto;
@@ -119,3 +122,20 @@
     margin: 0;
 }
 
+
+@media screen and (max-width: 767px) {
+    .news-card, .media-left, .small-media-left, .media-bottom-left, .media-left.valign-start, .small-media-left.valign-start{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "topic"
+            "media"
+            "title"
+            "description"
+            "author"
+            "links";
+        padding: 0;
+        padding-bottom: 8px;
+    }
+
+}

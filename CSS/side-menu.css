@@ -1,3 +1,5 @@
+/* ---------- SIDE MENU ---------- */
+
 #side-menu .overlay{
     background-color: rgba(0,0,0,.3);
     z-index: 99;
@@ -8,6 +10,8 @@
     width: 100vw;
     height: 100vh;
 }
+
+/* CONTENT */
 
 #side-menu__content{
     position: fixed;
@@ -22,6 +26,7 @@
 }
 
 
+/* HEADER */
 #side-menu__header{
     display: flex;
     justify-content: space-between;
@@ -39,6 +44,8 @@
     padding: 0;
     margin: 0;
 }
+
+/* SEARCH */
 
 #side-menu__search{
     padding: 0 24px 0 16px;
@@ -74,7 +81,7 @@
     padding-right: 8px;
 }
 
-
+/* MENU */
 
 #side-menu__section .footer__menu{
     flex-direction: column;
@@ -98,4 +105,35 @@
 
 @media screen and (max-width: 767px){
     
+    #side-menu__search{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px 0;
+        margin: 0;
+    }
+
+    #side-menu__search  input {
+        width: 285px;
+    }
+
+    #side-menu__section .footer__menu{
+        padding: 0 0 100px 30px;
+    }
+
+    #side-menu__content{
+        width: 100%;
+    }
+    #side-menu__section .footer__menu__section{
+        margin: 0;
+        padding: 0;
+        border-top: 0px;
+    }
+    #side-menu__section .footer__menu__section ul li a{
+        font-size: 12px;
+    }
+
+    #side-menu__section .footer__menu__section > ul:not(:first-of-type){
+        columns : 1;
+    }
 }

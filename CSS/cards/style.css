@@ -18,25 +18,12 @@
     margin: 0;
 }
 
-@media screen and (max-width: 1539px){
-    .news-card__topic{
-        font-size: 0.8125rem;
-    }
-}
-
 /* Title */
 .news-card__title {
     font-weight: 600;
     font-size: 2rem;
     line-height: 39px;
     margin: 0;
-}
-
-@media screen and (max-width: 1539px){
-    .news-card__title{
-        font-size: 1.5rem;
-        line-height: 31px;
-    }
 }
 
 /* Credits */
@@ -47,12 +34,6 @@
     font-size: 0.8125rem;
     font-weight: 400px;
     line-height: 16px;
-}
-
-@media screen and (max-width: 1539px){
-    .news-card__credits{
-        font-size: 0.75rem;
-    }
 }
 
 /* Media */
@@ -116,13 +97,6 @@
     font-weight: 600;
 }
 
-@media screen and (max-width: 1539px){
-    .news-card__description{
-        font-size: 0.875rem;
-        line-height: 21px;
-    }
-}
-
 
 /* ----- MEDIA BOTTOM LEFT STYLING -----*/
 
@@ -130,13 +104,6 @@
     font-size: 1.625rem;
     line-height: 33px;
     margin-bottom: 10px;
-}
-
-@media screen and (max-width: 1539px){
-    .media-bottom-left .news-card__title{
-        font-size: 1.25rem;
-        line-height: 27px;
-    }
 }
 
 .media-bottom-left .news-card__credits{
@@ -173,13 +140,6 @@
 .media-left .news-card__title {
     font-size: 1.625rem;
     line-height: 33px;
-}
-
-@media screen and (max-width: 1539px){
-    .media-left .news-card__title{
-        font-size: 1.25rem;
-        line-height: 27px;
-    }
 }
 
 
@@ -237,4 +197,118 @@
 /* MEDIA TOP STYLING */
 .media-top .news-card__media{
     margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1539px){
+    .news-card__topic{
+        font-size: 0.8125rem;
+    }
+
+    .news-card__title{
+        font-size: 1.5rem;
+        line-height: 31px;
+    }
+
+    .news-card__credits{
+        font-size: 0.75rem;
+    }
+
+    .media-left .news-card__title{
+        font-size: 1.25rem;
+        line-height: 27px;
+    }
+
+    .news-card__description{
+        font-size: 0.875rem;
+        line-height: 21px;
+    }
+
+    .media-bottom-left .news-card__title{
+        font-size: 1.25rem;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .news-card a:hover {
+        color: inherit
+    }
+
+    .news-card a:active {
+        text-decoration: underline;
+        text-decoration-color: #000;
+    }
+
+    .news-section .news-section__content .news-card,
+    .news-section .news-card{
+        border-bottom: 1px solid var(--border-color);
+    }
+    /* NEWS CARD ELEMENTS STYLING */
+    .news-card .news-card__media,
+    .media-left .news-card__media,
+    .small-media-left .news-card__media,
+    .media-bottom-left .news-card__media{
+        margin: 0 0 16px 0;
+        padding: 0;
+    }
+
+    .news-card .news-card__title,
+    .media-left .news-card__title,
+    .small-media-left .news-card__title,
+    .media-bottom-left .news-card__title{
+        font-size: 1.25rem;
+        line-height: 24px;
+        padding: 0 0 16px 0;
+        margin: 0;
+    }
+    .news-card .news-card__topic,
+    .media-left .news-card__topic,
+    .small-media-left .news-card__topic,
+    .media-bottom-left .news-card__topic{
+        font-size: 0.75rem;
+        line-height: 1;
+        margin: 0 0 8px 0;
+        padding: 0;
+    }
+
+    .news-card .news-card__credits,
+    .media-left .news-card__credits,
+    .small-media-left .news-card__credits,
+    .media-bottom-left .news-card__credits{
+        font-size: 0.75rem;
+        line-height: 1;
+        margin: 0px;
+        padding:  0 0 8px 0;
+        color: #000;
+        font-family: "Libre Baskerville", Georgia, sans-serif; ;
+    }
+    .news-card .news-card__aside,
+    .media-left .news-card__aside,
+    .small-media-left .news-card__aside,
+    .media-bottom-left .news-card__aside{
+        margin: 0;
+        padding: 0;
+    }
+
+    .news-card .news-card__aside ul,
+    .media-left .news-card__aside ul,
+    .small-media-left .news-card__aside ul,
+    .media-bottom-left .news-card__aside ul{
+        margin: 0 0 0 2px;
+    }
+
+    .news-card__aside a{
+        font-size: 0.8125rem;
+        font-weight: 600;
+    }
+
+    .news-card .news-card__description,
+    .media-left .news-card__description,
+    .small-media-left .news-card__description,
+    .media-bottom-left .news-card__description{
+        margin: 0;
+        padding: 0 0 8px 0;
+    }
+
 }

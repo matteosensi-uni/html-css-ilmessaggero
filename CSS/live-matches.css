@@ -2,7 +2,10 @@
 
 .live-matches {
     padding: 0 15px;
+    margin: 16px 0;
 }
+
+/* HEADER */
 
 .live-matches__header {
     display: flex;
@@ -35,6 +38,7 @@
     border-radius: 8px;
 }
 
+/* CAROUSEL */
 
 .live-matches__carousel {
     display: flex;
@@ -80,11 +84,14 @@
     padding: 5px;
 }
 
+/* BUTTONS */
+
 .live-matches__right-btn,
 .live-matches__left-btn {
-    width: 5%;
-    font-size: 40px;
+    width: 50px;
     border: 0;
+    padding: 0;
     background-color: white;
-    margin: 5px;
+    font-size: 1.5rem;
+    color: #000;
 }

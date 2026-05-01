@@ -7,6 +7,8 @@ const scroll_amount = 250;
 
 const menuBtns = document.querySelectorAll('#menu-btn');
 const searchBtns = document.querySelectorAll('#search-btn');
+const closeBtns = document.querySelectorAll("#close-btn")
+
 
 const sideMenu = document.querySelector('#side-menu');
 const mainNav = document.querySelector('#main-nav');
@@ -25,9 +27,11 @@ window.addEventListener('scroll', () => {
         stickyNav.classList.remove('visually-hidden');
         document.querySelector(".header-top").style.borderWidth = 0;
         stickyNav.setAttribute("aria-hidden", "false");
+        mainNav.classList.add('visually-hidden');
     } else {
         stickyNav.classList.add('visually-hidden');
         stickyNav.setAttribute("aria-hidden", "true");
+        mainNav.classList.remove('visually-hidden');
     }
 });
 
@@ -58,12 +62,16 @@ menuBtns.forEach(btn => {
 searchBtns.forEach(btn => {
     btn.addEventListener('click', openSideMenu)
 });
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', closeSideMenu)
+});
 document.querySelector(".overlay").addEventListener('click', closeSideMenu);
-document.querySelector("#close-btn").addEventListener('click', closeSideMenu);
 
 
+//gestione del menu laterale
 function openSideMenu(event){
-    sideMenu.classList.remove('visually-hidden');
+    sideMenu.classList.remove('visually-hidden');    
+    sideMenu.removeAttribute('inert');
     document.body.style.overflow = "hidden";            
     menuBtns.forEach(btn => {
         btn.setAttribute("aria-expanded", "true");
@@ -74,7 +82,8 @@ function openSideMenu(event){
 }
 
 function closeSideMenu(event){
-    sideMenu.classList.add('visually-hidden');
+    sideMenu.classList.add('visually-hidden');    
+    sideMenu.setAttribute('inert', 'true');
     document.body.style.overflow = "scroll";
     menuBtns.forEach(btn => {
         btn.setAttribute("aria-expanded", "false");
@@ -98,6 +107,18 @@ const footerSectionContent = document.querySelectorAll('.footer__menu__section >
 
 const bottomMenu = document.querySelector('#bottom-menu');
 
+const sideMenuHeader = document.querySelector('#side-menu__header');
+const sideMenuNav = document.querySelector('.sticky-nav-side');
+
+const topNewsTopics = document.querySelectorAll('#top-news .news-card__topic');
+const topNewsHeader = document.querySelector('#top-news .news-section__header');
+const topNewsDesktopTopics = document.querySelectorAll('#top-news .news-card__title b');
+
+const sectionDivider = document.querySelectorAll('.section-divider');
+const articleDivider = document.querySelectorAll('.article-divider');
+
+const frontSection = document.querySelector('.front-section');
+
 function mobileLayout(isMobile) {    
     /* Gestione della ADV iniziale */
     if (isMobile) {
@@ -105,10 +126,12 @@ function mobileLayout(isMobile) {
         if(topAdvHidden){
             topAdv.classList.remove('visually-hidden');
         }
+        stickyNav.style.top = topAdv.offsetHeight+'px';
     } else {
         if (topAdvHidden) {
             topAdv.classList.add('visually-hidden');
         }
+        stickyNav.style.top = '0';
     }
 
 
@@ -149,8 +172,33 @@ function mobileLayout(isMobile) {
     }
 
     //Bottom menu
-    bottomMenu.classList.toggle('visually-hidden', !isMobile)
+    bottomMenu.classList.toggle('visually-hidden', !isMobile);
+
+    //Side Menu
+    sideMenuHeader.classList.toggle('visually-hidden', isMobile)
+    sideMenuNav.classList.toggle('visually-hidden', !isMobile)
+
+    //Top news
+    topNewsTopics.forEach(el => {
+        el.classList.toggle('visually-hidden', !isMobile);
+    });
+    topNewsDesktopTopics.forEach(el => {
+        el.classList.toggle('visually-hidden', isMobile);
+    });
+    topNewsHeader.classList.toggle('visually-hidden', !isMobile);
+
+    //Section
+    sectionDivider.forEach(el => {
+        el.classList.toggle('section-divider', !isMobile);
+    });
+    articleDivider.forEach(el => {
+        el.classList.toggle('article-divider', !isMobile);
+    });
+    frontSection.classList.toggle('visually-hidden', !isMobile);
 }
 
 mediaQueryMobile.addEventListener('change', e => mobileLayout(e.matches));
 mobileLayout(mediaQueryMobile.matches);
+
+
+
